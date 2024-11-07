@@ -9,6 +9,7 @@ class AddComentar extends React.Component {
             komentar: ""
         }
         this.onChangeKomentarHandler = this.onChangeKomentarHandler.bind(this);
+        this.onSubmitHandler = this.onSubmitHandler.bind(this);
     }
 
     onChangeKomentarHandler(event) {
@@ -19,11 +20,16 @@ class AddComentar extends React.Component {
         })
     }
 
+    //Selesaikan Fungsi Untuk Menambah Komentar Ketika Button Di Klik
+    onSubmitHandler() {
+
+    }
+
     render() {
         return (
             <div className=" flex gap-x-3 mb-4">
                 <Input label="Komentar" placeholder='Tambahkan Komentar' size='lg' color='black' value={this.state.komentar} onChange={this.onChangeKomentarHandler} />
-                <Button>Post</Button>;
+                <Button onClick={this.onSubmitHandler}>Post</Button>;
             </div>
         )
     }

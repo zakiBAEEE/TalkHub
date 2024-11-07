@@ -91,7 +91,7 @@ class CardComentar extends React.Component {
     render() {
         // Full text for the content
         return (
-            <Card color="white" shadow={false} className=" px-4 min-h-[5rem]">
+            <Card color="white" shadow={false} className=" pl-4 min-h-[5rem]">
                 <CardHeader
                     color="transparent"
                     floated={false}

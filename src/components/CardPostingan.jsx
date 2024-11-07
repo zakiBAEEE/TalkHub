@@ -12,7 +12,7 @@ import { CommentButton } from "../button/CommentButton";
 import { ComentarList } from "./ComentarList";
 
 
-class TestimonialCard extends Component {
+class CardPostingan extends Component {
     constructor(props) {
         super(props);
         // Set initial state
@@ -171,4 +171,4 @@ class TestimonialCard extends Component {
     }
 }
 
-export { TestimonialCard };
+export { CardPostingan };

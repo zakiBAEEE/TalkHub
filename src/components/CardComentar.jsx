@@ -91,7 +91,7 @@ class CardComentar extends React.Component {
     render() {
         // Full text for the content
         return (
-            <Card color="white" shadow={false} className="w-[34rem] px-4 min-h-[5rem] border-t-[1px] border-blue-gray-900 border-solid">
+            <Card color="white" shadow={false} className="w-[34rem] px-4 min-h-[5rem]">
                 <CardHeader
                     color="transparent"
                     floated={false}
@@ -114,9 +114,8 @@ class CardComentar extends React.Component {
                     </div>
                 </CardHeader>
                 <CardBody className="mb-3 p-0">
-                    <Typography variant="h5" className="mb-2">Judul Postingan...</Typography>
                     <Typography>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla voluptates consequuntur nemo deserunt quis fuga corporis aliquam porro reprehenderit laboriosam, tempore molestiae et ducimus eius natus saepe libero cupiditate optio explicabo laborum distinctio. A recusandae error nisi incidunt, asperiores natus totam soluta nesciunt perspiciatis, alias voluptas id dignissimos neque dicta.Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, sint, esse magnam vel voluptate sunt odit aliquam voluptatum quod consequatur ullam ipsa recusandae provident. Autem voluptatem quisquam voluptatum asperiores eum ullam nesciunt laudantium excepturi tempore harum accusamus soluta quos voluptas iusto, doloribus totam sunt fugit cupiditate ipsam suscipit! Vitae nesciunt molestias modi voluptate. Doloribus, magnam. Sint odio quaerat et labore velit debitis facere quisquam modi a accusantium beatae, aut repellendus sequi excepturi quas est cumque laudantium temporibus veritatis iste ducimus eos. Dolore sint officia reiciendis? Quas vel veniam distinctio eum, deleniti temporibus, in voluptate, consequatur ipsa non magnam dolorum voluptatem!
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla voluptates consequuntur nemo deserunt quis fuga cors vel veniam distinctio eum, deleniti temporibus, in voluptate, consequatur ipsa non magnam dolorum voluptatem!
                     </Typography>
                 </CardBody>
                 <div className="flex gap-5 pb-2">

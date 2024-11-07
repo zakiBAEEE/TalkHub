@@ -1,4 +1,5 @@
-import React, { Component } from "react";
+import React from 'react'
+
 import {
     Card,
     CardHeader,
@@ -8,11 +9,10 @@ import {
 } from "@material-tailwind/react";
 import { DislikeButton } from "../button/DislikeButton";
 import { LikeButton } from "../button/LikeButton";
-import { CommentButton } from "../button/CommentButton";
-import { ComentarList } from "./ComentarList";
 
+// Card comentar ini memiliki props likes, dislikes, komentar, penggunaId
 
-class TestimonialCard extends Component {
+class CardComentar extends React.Component {
     constructor(props) {
         super(props);
         // Set initial state
@@ -23,20 +23,9 @@ class TestimonialCard extends Component {
             hasDislikes: false,
             hasLikes: false,
             visibilitasKomentar: false,
-
-
-            //Di Comment : ... akan berisi fungsi yang mengembalikan data komentar berdasarkan postinganId dari props Sehingga untuk mendapatkan jumlah komentar tinggal pake fungsi saja dengan menghitung seberapa banyak item komentar yang ada
-            comment: 0,
-
-            // INI SEMUA YANG DI KOMEN DI BAWAH AKAN ADA DI PROPS
-            // postingan: "",
-            // urlGambar: "",
-            // penggunaId: "",
-            // postinganId: "",
         };
         this.onClickDislikesHandler = this.onClickDislikesHandler.bind(this);
         this.onClickLikesHandler = this.onClickLikesHandler.bind(this);
-        this.onClickCommentHandler = this.onClickCommentHandler.bind(this);
     }
 
 
@@ -99,32 +88,10 @@ class TestimonialCard extends Component {
         }
     }
 
-    onClickCommentHandler() {
-        this.setState((prevState) => {
-            console.log(this.state.visibilitasKomentar)
-            return {
-                visibilitasKomentar: !prevState.visibilitasKomentar
-            }
-
-        })
-    }
-
-    // Method to toggle the expanded state
-    toggleExpand = () => {
-        this.setState((prevState) => ({
-            isExpanded: !prevState.isExpanded, // Toggle the state
-        }));
-    };
-
     render() {
         // Full text for the content
-        const fullText = `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla voluptates consequuntur nemo deserunt quis fuga corporis aliquam porro reprehenderit laboriosam, tempore molestiae et ducimus eius natus saepe libero cupiditate optio explicabo laborum distinctio. A recusandae error nisi incidunt, asperiores natus totam soluta nesciunt perspiciatis, alias voluptas id dignissimos neque dicta.Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, sint, esse magnam vel voluptate sunt odit aliquam voluptatum quod consequatur ullam ipsa recusandae provident. Autem voluptatem quisquam voluptatum asperiores eum ullam nesciunt laudantium excepturi tempore harum accusamus soluta quos voluptas iusto, doloribus totam sunt fugit cupiditate ipsam suscipit! Vitae nesciunt molestias modi voluptate. Doloribus, magnam. Sint odio quaerat et labore velit debitis facere quisquam modi a accusantium beatae, aut repellendus sequi excepturi quas est cumque laudantium temporibus veritatis iste ducimus eos. Dolore sint officia reiciendis? Quas vel veniam distinctio eum, deleniti temporibus, in voluptate, consequatur ipsa non magnam dolorum voluptatem!`;
-
-        // Limit text to show before expanding
-        const limitedText = fullText.slice(0, 200);
-
         return (
-            <Card color="white" shadow={true} className="w-[44rem] px-4 min-h-[13rem]">
+            <Card color="white" shadow={false} className="w-[34rem] px-4 min-h-[5rem] border-t-[1px] border-blue-gray-900 border-solid">
                 <CardHeader
                     color="transparent"
                     floated={false}
@@ -149,26 +116,16 @@ class TestimonialCard extends Component {
                 <CardBody className="mb-3 p-0">
                     <Typography variant="h5" className="mb-2">Judul Postingan...</Typography>
                     <Typography>
-                        {this.state.isExpanded ? fullText : limitedText}
-                        {fullText.length > 10 && (
-                            <span
-                                onClick={this.toggleExpand}
-                                className="text-blue-500 cursor-pointer ml-2"
-                            >
-                                {this.state.isExpanded ? "Tampilkan lebih sedikit" : "Baca selengkapnya"}
-                            </span>
-                        )}
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla voluptates consequuntur nemo deserunt quis fuga corporis aliquam porro reprehenderit laboriosam, tempore molestiae et ducimus eius natus saepe libero cupiditate optio explicabo laborum distinctio. A recusandae error nisi incidunt, asperiores natus totam soluta nesciunt perspiciatis, alias voluptas id dignissimos neque dicta.Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, sint, esse magnam vel voluptate sunt odit aliquam voluptatum quod consequatur ullam ipsa recusandae provident. Autem voluptatem quisquam voluptatum asperiores eum ullam nesciunt laudantium excepturi tempore harum accusamus soluta quos voluptas iusto, doloribus totam sunt fugit cupiditate ipsam suscipit! Vitae nesciunt molestias modi voluptate. Doloribus, magnam. Sint odio quaerat et labore velit debitis facere quisquam modi a accusantium beatae, aut repellendus sequi excepturi quas est cumque laudantium temporibus veritatis iste ducimus eos. Dolore sint officia reiciendis? Quas vel veniam distinctio eum, deleniti temporibus, in voluptate, consequatur ipsa non magnam dolorum voluptatem!
                     </Typography>
                 </CardBody>
                 <div className="flex gap-5 pb-2">
-                    <CommentButton jumlahComment={12} onClickHandler={this.onClickCommentHandler} />
                     <LikeButton jumlahLikes={this.state.likes} onClickHandler={this.onClickLikesHandler} />
                     <DislikeButton jumlahDislikes={this.state.dislikes} onClickHandler={this.onClickDislikesHandler} />
                 </div>
-                {this.state.visibilitasKomentar && (<ComentarList />)}
             </Card>
         );
     }
 }
 
-export { TestimonialCard };
+export { CardComentar }

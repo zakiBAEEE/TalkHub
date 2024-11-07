@@ -12,7 +12,7 @@ function ComentarList({ comentars }) {
         } */}
 
             <Typography variant='h6' className="mb-2">Komentar</Typography>
-            <div className=' h-[1px] bg-blue-gray-900'></div>
+            <div className=' h-[1px] bg-blue-gray-600'></div>
             <CardComentar />
             <CardComentar />
             <CardComentar />

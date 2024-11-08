@@ -6,9 +6,9 @@ import {
     Typography,
     Avatar,
 } from "@material-tailwind/react";
-import { DislikeButton } from "../../button/DislikeButton";
-import { LikeButton } from "../../button/LikeButton";
-import { CommentButton } from "../../button/CommentButton";
+import { DislikeButton } from "../button/DislikeButton";
+import { LikeButton } from "../button/LikeButton";
+import { CommentButton } from "../button/CommentButton";
 import { ComentarList } from "../cardList/ComentarList";
 
 
@@ -25,7 +25,7 @@ class CardPostingan extends Component {
             visibilitasKomentar: false,
 
 
-            //Di Comment : ... akan berisi fungsi yang mengembalikan data komentar berdasarkan postinganId dari props Sehingga untuk mendapatkan jumlah komentar tinggal pake fungsi saja dengan menghitung seberapa banyak item komentar yang ada
+            //Di comment : ... akan memanggil fungsi yang mengembalikan data komentar berdasarkan postinganId dari props Sehingga untuk mendapatkan jumlah komentar tinggal pake fungsi saja dengan menghitung seberapa banyak item komentar yang ada
             comment: 0,
 
             // INI SEMUA YANG DI KOMEN DI BAWAH AKAN ADA DI PROPS
@@ -33,6 +33,8 @@ class CardPostingan extends Component {
             // urlGambar: "",
             // penggunaId: "",
             // postinganId: "",
+            // likes : ,
+            // dislikes : 
         };
         this.onClickDislikesHandler = this.onClickDislikesHandler.bind(this);
         this.onClickLikesHandler = this.onClickLikesHandler.bind(this);

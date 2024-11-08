@@ -43,7 +43,7 @@ function SidebarOn({ toggleHandler }) {
                     <ListItemPrefix>
                         <ChatBubbleBottomCenterIcon className="h-5 w-5" />
                     </ListItemPrefix>
-                    Ruang Diskusi
+                    Diskusi
                 </ListItem>
                 <ListItem>
                     <ListItemPrefix>

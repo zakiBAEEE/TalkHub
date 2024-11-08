@@ -18,7 +18,7 @@ import {
 
 function SidebarOf({ toggleHandler }) {
     return (
-        <Card className="h-[calc(100vh)]  max-w-[5rem] p-4 shadow-xl shadow-blue-gray-900/5 bg-blue-gray-100 flex ">
+        <Card className="h-[calc(100vh)]  min-w-[5rem] p-4 shadow-xl shadow-blue-gray-900/5 bg-blue-gray-100 flex ">
             <div className="mb-2 p-4">
                 <button>
                     <Typography variant="h5" color="blue-gray" onClick={toggleHandler}>
@@ -27,19 +27,19 @@ function SidebarOf({ toggleHandler }) {
                 </button>
             </div>
             <div className='flex flex-col gap-5'>
-                <ListItem className='max-w-[3rem]'>
+                <ListItem>
                     <HomeIcon className="h-5 w-5" />
                 </ListItem>
-                <ListItem className='max-w-[3rem]'>
+                <ListItem>
                     <UserPlusIcon className="h-5 w-5" />
                 </ListItem>
-                <ListItem className='max-w-[3rem]'>
+                <ListItem>
                     <ChatBubbleBottomCenterIcon className="h-5 w-5" />
                 </ListItem>
-                <ListItem className='max-w-[3rem]'>
+                <ListItem>
                     <UserCircleIcon className="h-5 w-5" />
                 </ListItem>
-                <ListItem className='max-w-[3rem]'>
+                <ListItem>
                     <PowerIcon className="h-5 w-5" />
                 </ListItem>
             </div>

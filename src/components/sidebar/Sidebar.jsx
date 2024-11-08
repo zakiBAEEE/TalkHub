@@ -24,12 +24,18 @@ class Sidebar extends React.Component {
     }
 
     render() {
-        if (this.state.isSidebarOn) {
-            return <SidebarOn toggleHandler={this.toggleSidebar} />
-        }
-        else {
-            return <SidebarOf toggleHandler={this.toggleSidebar} />
-        }
+
+        return (
+            <div className={`transition-all duration-300 ease-out ${this.state.isSidebarOn ? 'w-64' : 'w-20'
+                }`}
+            >
+                {this.state.isSidebarOn ? (
+                    <SidebarOn toggleHandler={this.toggleSidebar} />
+                ) : (
+                    <SidebarOf toggleHandler={this.toggleSidebar} />
+                )}
+            </div>
+        )
     }
 }
 

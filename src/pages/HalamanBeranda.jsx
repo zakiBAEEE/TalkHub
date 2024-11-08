@@ -1,13 +1,12 @@
 import React from 'react'
-import { CardPostingan } from '../components/card/CardPostingan'
 import { Sidebar } from '../components/sidebar/Sidebar'
+import { PostinganList } from '../components/cardList/PostinganList'
 function HalamanBeranda() {
     return (
         <div className='flex'>
             <Sidebar />
             <div className='mx-auto'>
-                <CardPostingan />
-                <CardPostingan />
+                <PostinganList />
             </div>
 
         </div>

@@ -23,6 +23,7 @@ class CardPostingan extends Component {
             hasDislikes: false,
             hasLikes: false,
             visibilitasKomentar: false,
+            isFollow: false,
 
 
             //Di comment : ... akan memanggil fungsi yang mengembalikan data komentar berdasarkan postinganId dari props Sehingga untuk mendapatkan jumlah komentar tinggal pake fungsi saja dengan menghitung seberapa banyak item komentar yang ada
@@ -109,6 +110,12 @@ class CardPostingan extends Component {
             }
 
         })
+    }
+
+    onFollowHandler() {
+        this.setState((prevState) => ({
+            isFollow: !prevState.isFollow, // Toggle the state
+        }));
     }
 
     // Method to toggle the expanded state

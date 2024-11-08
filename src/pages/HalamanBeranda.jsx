@@ -11,7 +11,6 @@ function HalamanBeranda() {
             </div>
             <AddPostingan />
         </div>
-
     )
 }
 

@@ -8,11 +8,10 @@ import {
     Chip,
 } from "@material-tailwind/react";
 import {
-    PresentationChartBarIcon,
-    ShoppingBagIcon,
+    UserPlusIcon,
+    ChatBubbleBottomCenterIcon,
     UserCircleIcon,
-    Cog6ToothIcon,
-    InboxIcon,
+    HomeIcon,
     PowerIcon,
 } from "@heroicons/react/24/solid";
 
@@ -27,34 +26,31 @@ function Sidebar() {
             <List>
                 <ListItem>
                     <ListItemPrefix>
-                        <PresentationChartBarIcon className="h-5 w-5" />
+                        <HomeIcon className="h-5 w-5" />
                     </ListItemPrefix>
                     Beranda
                 </ListItem>
                 <ListItem>
                     <ListItemPrefix>
-                        <PresentationChartBarIcon className="h-5 w-5" />
+                        <UserPlusIcon className="h-5 w-5" />
                     </ListItemPrefix>
                     Follow
                 </ListItem>
                 <ListItem>
                     <ListItemPrefix>
-                        <ShoppingBagIcon className="h-5 w-5" />
+                        <ChatBubbleBottomCenterIcon className="h-5 w-5" />
                     </ListItemPrefix>
                     Ruang Diskusi
                 </ListItem>
                 <ListItem>
                     <ListItemPrefix>
-                        <InboxIcon className="h-5 w-5" />
+                        <UserCircleIcon className="h-5 w-5" />
                     </ListItemPrefix>
                     Profile
-                    <ListItemSuffix>
-                        <Chip value="14" size="sm" variant="ghost" color="blue-gray" className="rounded-full" />
-                    </ListItemSuffix>
                 </ListItem>
                 <ListItem>
                     <ListItemPrefix>
-                        <UserCircleIcon className="h-5 w-5" />
+                        <PowerIcon className="h-5 w-5" />
                     </ListItemPrefix>
                     Logout
                 </ListItem>

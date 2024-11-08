@@ -1,7 +1,7 @@
 import React from 'react'
-import { CardComentar } from './CardComentar'
 import { Typography } from '@material-tailwind/react'
-import { AddComentar } from './AddComentar'
+import { CardComentar } from '../card/CardComentar'
+import { AddComentar } from '../form/AddComentar'
 
 function ComentarList({ comentars }) {
     return (
@@ -13,7 +13,7 @@ function ComentarList({ comentars }) {
         } */}
 
             <Typography variant='h6' className="mb-2">Komentar</Typography>
-            <AddComentar className='w-full' />
+            <AddComentar />
             <div className=' h-[1px] bg-blue-gray-600'></div>
             <CardComentar />
             <CardComentar />

@@ -23,7 +23,7 @@ class CardPostingan extends Component {
             hasDislikes: false,
             hasLikes: false,
             visibilitasKomentar: false,
-            isFollow: false,
+            isFollow: true,
 
 
             //Di comment : ... akan memanggil fungsi yang mengembalikan data komentar berdasarkan postinganId dari props Sehingga untuk mendapatkan jumlah komentar tinggal pake fungsi saja dengan menghitung seberapa banyak item komentar yang ada
@@ -40,6 +40,7 @@ class CardPostingan extends Component {
         this.onClickDislikesHandler = this.onClickDislikesHandler.bind(this);
         this.onClickLikesHandler = this.onClickLikesHandler.bind(this);
         this.onClickCommentHandler = this.onClickCommentHandler.bind(this);
+        this.onFollowHandler = this.onFollowHandler.bind(this);
     }
 
 
@@ -113,9 +114,11 @@ class CardPostingan extends Component {
     }
 
     onFollowHandler() {
-        this.setState((prevState) => ({
-            isFollow: !prevState.isFollow, // Toggle the state
-        }));
+        this.setState((prevState) => {
+            return {
+                isFollow: !prevState.isFollow
+            }
+        })
     }
 
     // Method to toggle the expanded state
@@ -155,6 +158,7 @@ class CardPostingan extends Component {
                         </div>
                         <Typography color="blue-gray" className="text-sm">12 April 2022</Typography>
                     </div>
+                    <span className="cursor-pointer text-blue-600" onClick={this.onFollowHandler}>{this.state.isFollow ? 'Unfollow' : 'Follow'}</span>
                 </CardHeader>
                 <CardBody className=" px-4 py-3">
                     <Typography variant="h5" className="mb-1">Judul Postingan...</Typography>

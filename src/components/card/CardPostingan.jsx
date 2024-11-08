@@ -126,7 +126,7 @@ class CardPostingan extends Component {
         const limitedText = fullText.slice(0, 200);
 
         return (
-            <Card color="white" shadow={true} className="w-[44rem] px-4 min-h-[13rem]">
+            <Card color="white" shadow={true} className="w-[44rem] px-4">
                 <CardHeader
                     color="transparent"
                     floated={false}

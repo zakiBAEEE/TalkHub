@@ -14,11 +14,12 @@ import {
     HomeIcon,
     PowerIcon,
 } from "@heroicons/react/24/solid";
+import { Copyright } from '../text/Copyright';
 
 
 function SidebarOf({ toggleHandler }) {
     return (
-        <Card className="h-[calc(100vh)]  min-w-[5rem] p-4 shadow-xl shadow-blue-gray-900/5 bg-blue-gray-100 flex ">
+        <Card className="h-[calc(100vh)]  min-w-[5rem] p-4 shadow-xl shadow-blue-gray-900/5 bg-blue-gray-50 flex fixed">
             <div className="mb-2 p-4">
                 <button>
                     <Typography variant="h5" color="blue-gray" onClick={toggleHandler}>
@@ -43,7 +44,6 @@ function SidebarOf({ toggleHandler }) {
                     <PowerIcon className="h-5 w-5" />
                 </ListItem>
             </div>
-
 
         </Card>
     );

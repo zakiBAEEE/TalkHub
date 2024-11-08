@@ -126,12 +126,13 @@ class CardPostingan extends Component {
         const limitedText = fullText.slice(0, 200);
 
         return (
-            <Card color="white" shadow={true} className="w-[44rem] px-4">
+            <Card color="white" shadow={true} className="w-[44rem]">
                 <CardHeader
                     color="transparent"
                     floated={false}
                     shadow={false}
-                    className="mx-0 flex items-center gap-4 pt-0 pb-4"
+                    className="mx-0 flex items-center gap-4 pt-0 pb-4 px-4"
+
                 >
                     <Avatar
                         size="lg"
@@ -148,8 +149,8 @@ class CardPostingan extends Component {
                         <Typography color="blue-gray" className="text-sm">12 April 2022</Typography>
                     </div>
                 </CardHeader>
-                <CardBody className="mb-3 p-0">
-                    <Typography variant="h5" className="mb-2">Judul Postingan...</Typography>
+                <CardBody className=" px-4 py-3">
+                    <Typography variant="h5" className="mb-1">Judul Postingan...</Typography>
                     <Typography>
                         {this.state.isExpanded ? fullText : limitedText}
                         {fullText.length > 10 && (
@@ -162,7 +163,7 @@ class CardPostingan extends Component {
                         )}
                     </Typography>
                 </CardBody>
-                <div className="flex gap-5 pb-2">
+                <div className="flex gap-5 pb-2 px-4">
                     <CommentButton jumlahComment={12} onClickHandler={this.onClickCommentHandler} />
                     <LikeButton jumlahLikes={this.state.likes} onClickHandler={this.onClickLikesHandler} />
                     <DislikeButton jumlahDislikes={this.state.dislikes} onClickHandler={this.onClickDislikesHandler} />

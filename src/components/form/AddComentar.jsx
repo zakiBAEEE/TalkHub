@@ -27,7 +27,7 @@ class AddComentar extends React.Component {
 
     render() {
         return (
-            <div className=" flex gap-x-3 mb-4">
+            <div className=" flex gap-x-3 mb-4 p-2 bg-blue-gray-50">
                 <Input label="Komentar" placeholder='Tambahkan Komentar' size='lg' color='black' value={this.state.komentar} onChange={this.onChangeKomentarHandler} />
                 <Button onClick={this.onSubmitHandler}>Post</Button>;
             </div>

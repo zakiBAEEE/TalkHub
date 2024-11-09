@@ -1,7 +1,7 @@
 import React from 'react'
 import { Sidebar } from '../components/sidebar/Sidebar'
 import { PostinganList } from '../components/cardList/PostinganList'
-import { AddPostingan } from '../components/button/AddPostingan'
+import TambahPostingan from '../components/modal box/TambahPostingan'
 function HalamanBeranda() {
     return (
         <div className='flex bg-blue-gray-50 min-h-[100vh]'>
@@ -9,7 +9,7 @@ function HalamanBeranda() {
             <div className='mx-auto'>
                 <PostinganList />
             </div>
-            <AddPostingan />
+            <TambahPostingan />
         </div>
     )
 }

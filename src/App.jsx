@@ -9,7 +9,7 @@ import { HalamanFollow } from './pages/HalamanFollow'
 
 function App() {
   return (
-    <HalamanBeranda />
+    <HalamanFollow />
   )
 }
 

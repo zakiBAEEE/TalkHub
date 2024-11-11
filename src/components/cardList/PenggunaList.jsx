@@ -7,10 +7,14 @@ function PenggunaList(Penggunas) {
                 return <CardPengguna/>
             })
         } */}
-    return (<>
-        <CardPengguna />
-
-    </>
+    return (
+        <div className='flex w-full flex-wrap justify-evenly'>
+            <CardPengguna />
+            <CardPengguna />
+            <CardPengguna />
+            <CardPengguna />
+            <CardPengguna />
+        </div>
     )
 
 }

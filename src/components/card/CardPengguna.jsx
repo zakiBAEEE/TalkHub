@@ -1,63 +1,27 @@
 import {
     Card,
-    CardHeader,
     CardBody,
     CardFooter,
     Typography,
-    Tooltip,
+    Button,
+    Avatar,
 } from "@material-tailwind/react";
 
-function CardPengguna() {
+export function CardPengguna() {
     return (
-        <Card className="w-96">
-            <CardHeader floated={false} className="h-80">
-                <img src="https://docs.material-tailwind.com/img/team-3.jpg" alt="profile-picture" />
-            </CardHeader>
-            <CardBody className="text-center">
-                <Typography variant="h4" color="blue-gray" className="mb-2">
-                    Natalie Paisley
+        <Card className="mt-6 w-60">
+            <Avatar src="https://docs.material-tailwind.com/img/face-2.jpg" alt="avatar" size="xxl" className="m-auto pt-2" />
+            <CardBody className="pb-2">
+                <Typography variant="h5" color="blue-gray" className="mb-2 text-center">
+                    Muhammad Dzaky Raihan
                 </Typography>
-                <Typography color="blue-gray" className="font-medium" textGradient>
-                    CEO / Co-Founder
+                <Typography className="">
+                    Hi, Im a professional Web Dev
                 </Typography>
             </CardBody>
-            <CardFooter className="flex justify-center gap-7 pt-2">
-                <Tooltip content="Like">
-                    <Typography
-                        as="a"
-                        href="#facebook"
-                        variant="lead"
-                        color="blue"
-                        textGradient
-                    >
-                        <i className="fab fa-facebook" />
-                    </Typography>
-                </Tooltip>
-                <Tooltip content="Follow">
-                    <Typography
-                        as="a"
-                        href="#twitter"
-                        variant="lead"
-                        color="light-blue"
-                        textGradient
-                    >
-                        <i className="fab fa-twitter" />
-                    </Typography>
-                </Tooltip>
-                <Tooltip content="Follow">
-                    <Typography
-                        as="a"
-                        href="#instagram"
-                        variant="lead"
-                        color="purple"
-                        textGradient
-                    >
-                        <i className="fab fa-instagram" />
-                    </Typography>
-                </Tooltip>
+            <CardFooter className="pt-0 pb-2 justify-center flex">
+                <Button className="bg-light-blue-800" size="sm">Follow</Button>
             </CardFooter>
         </Card>
     );
 }
-
-export { CardPengguna }

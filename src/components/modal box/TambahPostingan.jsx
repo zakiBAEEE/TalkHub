@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { AddPostingan } from '../button/AddPostingan'
-import FroalaEditorComponent from 'react-froala-wysiwyg';
+import FroalaEditor from 'react-froala-wysiwyg';
 import 'froala-editor/css/froala_editor.pkgd.min.css';
 import 'froala-editor/js/froala_editor.pkgd.min.js';
 
@@ -15,6 +15,7 @@ import {
     Input,
     Checkbox,
 } from "@material-tailwind/react";
+import { TOOLBAR_BUTTONS, TOOLBAR_VISIBLE_BUTTONS } from "froala-editor/js/froala_editor.pkgd.min.js";
 
 class TambahPostingan extends Component {
     constructor(props) {
@@ -43,7 +44,23 @@ class TambahPostingan extends Component {
                     className="bg-transparent shadow-none"
                 >
 
-                    <FroalaEditorComponent tag="textarea" />
+                    <FroalaEditor
+                        config={{
+                            placeholderText: 'Tulis Isi Pikiran Anda...',
+                            toolbarButtons: {
+                                moreText: ['bold', 'italic', 'underline', 'strikeThrough', 'subscript', 'superscript', 'fontFamily', 'fontSize', 'textColor', 'backgroundColor', 'inlineClass', 'inlineStyle', 'clearFormatting'],
+                                moreParagraph: ['alignLeft', 'alignCenter'],
+                                moreRich: ['insertLink']
+                            },
+                            toolbarButtonsXS: {
+                                moreText: ['bold', 'italic', 'underline', 'strikeThrough', 'subscript', 'superscript', 'fontFamily', 'fontSize', 'textColor', 'backgroundColor', 'inlineClass', 'inlineStyle', 'clearFormatting'],
+                                moreParagraph: ['alignLeft', 'alignCenter'],
+                                moreRich: ['insertLink']
+                            }
+                        }}
+                        tag="textarea"
+                    />
+
 
                 </Dialog>
             </>

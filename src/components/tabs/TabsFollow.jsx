@@ -1,4 +1,7 @@
-import React from "react";
+
+
+
+import React, { Component } from "react";
 import {
     Tabs,
     TabsHeader,
@@ -7,26 +10,27 @@ import {
     TabPanel,
 } from "@material-tailwind/react";
 
-export function TabsFollow() {
-    const [activeTab, setActiveTab] = React.useState("html");
+function TabsFollow(activeTab, onClickHandler) {
+
+
     const data = [
         {
             label: "HTML",
             value: "html",
             desc: `It really matters and then like it really doesn't matter.
-      What matters is the people who are sparked by it. And the people 
-      who are like offended by it, it doesn't matter.`,
+          What matters is the people who are sparked by it. And the people 
+          who are like offended by it, it doesn't matter.`,
         },
         {
             label: "React",
             value: "react",
             desc: `Because it's about motivating the doers. Because I'm here
-      to follow my dreams and inspire other people to follow their dreams, too.`,
+          to follow my dreams and inspire other people to follow their dreams, too.`,
         },
-
     ];
+
     return (
-        <Tabs value={activeTab}>
+        <Tabs value='html'>
             <TabsHeader
                 className="rounded-none border-b border-blue-gray-50 bg-transparent p-0"
                 indicatorProps={{
@@ -38,8 +42,8 @@ export function TabsFollow() {
                     <Tab
                         key={value}
                         value={value}
-                        onClick={() => setActiveTab(value)}
-                        className={activeTab === value ? "text-gray-900" : ""}
+                        onClick={''}
+                        className={''}
                     >
                         {label}
                     </Tab>
@@ -54,4 +58,10 @@ export function TabsFollow() {
             </TabsBody>
         </Tabs>
     );
+
 }
+
+export default TabsFollow;
+
+
+export { TabsFollow }

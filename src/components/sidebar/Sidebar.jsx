@@ -26,7 +26,7 @@ class Sidebar extends React.Component {
     render() {
 
         return (
-            <div className={`transition-all duration-300 ease-out ${this.state.isSidebarOn ? 'w-[12rem]' : 'w-20'
+            <div className={`transition-all duration-900 ease-out ${this.state.isSidebarOn ? 'w-[12rem]' : 'w-20'
                 }`}
             >
                 {this.state.isSidebarOn ? (

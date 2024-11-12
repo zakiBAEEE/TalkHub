@@ -10,7 +10,7 @@ import { CardRuangDiskusi } from './components/card/CardRuangDiskusi'
 
 function App() {
   return (
-    <CardRuangDiskusi />
+    <HalamanFollow />
   )
 }
 

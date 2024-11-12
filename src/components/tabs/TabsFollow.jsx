@@ -3,7 +3,7 @@ import { Tab, Tabs, TabsHeader } from '@material-tailwind/react'
 
 function TabsFollow({ handler, stateAktif }) {
     return (
-        <Tabs value={stateAktif}>
+        <Tabs value={stateAktif} className="w-1/4 m-auto">
             <TabsHeader
                 className="rounded-none border-b border-blue-gray-50 bg-transparent p-0"
                 indicatorProps={{

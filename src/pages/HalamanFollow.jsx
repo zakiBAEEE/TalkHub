@@ -1,7 +1,7 @@
 import React from 'react'
 import { Sidebar } from '../components/sidebar/Sidebar'
-import { PenggunaList } from '../components/cardList/PenggunaList'
 import { TabsFollow } from '../components/tabs/TabsFollow'
+import { CariPengguna } from '../components/form/CariPengguna'
 
 
 class HalamanFollow extends React.Component {
@@ -31,6 +31,7 @@ class HalamanFollow extends React.Component {
                 <Sidebar />
                 <div className='mx-auto flex-grow'>
                     <TabsFollow handler={this.onChangeTabsAktif} stateAktif={this.state.tabsAktif} />
+                    <CariPengguna />
                 </div>
             </div>
         )

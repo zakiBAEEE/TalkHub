@@ -29,7 +29,7 @@ class HalamanFollow extends React.Component {
         return (
             <div className='flex bg-blue-gray-50 min-h-[100vh] ' >
                 <Sidebar />
-                <div className='mx-auto flex-grow'>
+                <div className='mx-auto flex-grow flex flex-col gap-6'>
                     <TabsFollow handler={this.onChangeTabsAktif} stateAktif={this.state.tabsAktif} />
                     <CariPengguna />
                 </div>

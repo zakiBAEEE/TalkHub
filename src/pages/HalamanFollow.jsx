@@ -7,24 +7,25 @@ class HalamanFollow extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
-            tabsAktif: 'cariPengguna'
+            tabsAktif: 'cari'
         }
+
+        this.onChangeTabsAktif = this.onChangeTabsAktif.bind(this)
     }
 
-    onChangeTabsAktif(value) {
-        this.setState(() => {
+    onChangeTabsAktif() {
+        this.setState((prevState) => {
             return {
-                tabsAktif: value
+                tabsAktif: prevState.tabsAktif = 'cariPengguna' ? 'mengikuti' : 'cariPengguna'
             }
         })
     }
     render() {
+        console.log(this.state.tabsAktif)
         return (
             <div className='flex bg-blue-gray-50 min-h-[100vh] ' >
                 <Sidebar />
                 <div className='mx-auto flex-grow'>
-                    <TabsFollow />
-                    <PenggunaList />
                 </div>
             </div>
         )

@@ -11,8 +11,8 @@ function TabsFollow({ handler, stateAktif }) {
                         "bg-transparent border-b-2 border-gray-900 shadow-none rounded-none",
                 }}
             >
-                <Tab key='cari' value='cari' onClick={handler}>Cari Pengguna</Tab >
-                <Tab key='mengikuti' value='mengikuti' onClick={handler}>Mengikuti</Tab>
+                <Tab key='cari' value='cari' onClick={() => { handler('cari') }}>Cari Pengguna</Tab >
+                <Tab key='mengikuti' value='mengikuti' onClick={() => { handler('mengikuti') }}>Mengikuti</Tab>
             </TabsHeader>
         </Tabs>
     )

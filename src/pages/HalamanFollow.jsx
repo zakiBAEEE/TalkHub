@@ -14,10 +14,10 @@ class HalamanFollow extends React.Component {
         this.onChangeTabsAktif = this.onChangeTabsAktif.bind(this)
     }
 
-    onChangeTabsAktif() {
-        this.setState((prevState) => {
+    onChangeTabsAktif(tabsAktif) {
+        this.setState(() => {
             return {
-                tabsAktif: prevState.tabsAktif == 'cari' ? 'mengikuti' : 'cari'
+                tabsAktif: tabsAktif
             }
         })
     }

@@ -1,7 +1,6 @@
 import React from 'react'
 import { Sidebar } from '../components/sidebar/Sidebar'
 import { PenggunaList } from '../components/cardList/PenggunaList'
-import { TabsFollow } from '../components/tabs/TabsFollow'
 
 class HalamanFollow extends React.Component {
     constructor(props) {

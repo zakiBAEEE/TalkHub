@@ -8,7 +8,8 @@ class HalamanFollow extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
-            tabsAktif: 'cari'
+            tabsAktif: 'cari',
+            hehe: "cari"
         }
 
         this.onChangeTabsAktif = this.onChangeTabsAktif.bind(this)
@@ -17,7 +18,8 @@ class HalamanFollow extends React.Component {
     onChangeTabsAktif(tabsAktif) {
         this.setState((prevState) => {
             // Agar halaman tidak refresh apabila terjadi perubahan state ketika state nya tidak berubah
-            if (prevState != tabsAktif) {
+            if (prevState.tabsAktif != tabsAktif) {
+                console.log(tabsAktif)
                 return {
                     tabsAktif: tabsAktif
                 }

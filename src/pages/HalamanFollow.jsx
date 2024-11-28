@@ -30,7 +30,6 @@ class HalamanFollow extends React.Component {
         })
     }
     render() {
-        console.log(this.state.tabsAktif)
         return (
             <div className='flex bg-blue-gray-50' >
                 <Sidebar />

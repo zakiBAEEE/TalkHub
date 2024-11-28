@@ -9,10 +9,18 @@ class HalamanFollow extends React.Component {
         super(props)
         this.state = {
             tabsAktif: 'cari',
-            hehe: "cari"
+            pencarian: ""
         }
 
         this.onChangeTabsAktif = this.onChangeTabsAktif.bind(this)
+    }
+
+    onChangePencarian(inputanUser) {
+        this.setState((prevState) => {
+            return {
+                pencarian: inputanUser
+            }
+        })
     }
 
     onChangeTabsAktif(tabsAktif) {
@@ -32,7 +40,7 @@ class HalamanFollow extends React.Component {
             <div className='flex bg-blue-gray-50' >
                 <Sidebar />
                 <div className=' w-full  flex flex-col'>
-                    <TabsFollow handler={this.onChangeTabsAktif} stateAktif={this.state.tabsAktif} className="h-auto" />
+                    <TabsFollow handler={this.onChangeTabsAktif} stateAktif={this.state.tabsAktif} className="h-auto" pencarianHandler={this.onChangePencarian} />
                 </div>
             </div>
         )

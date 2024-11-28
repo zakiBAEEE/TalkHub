@@ -3,7 +3,7 @@ import { Tab, Tabs, TabsBody, TabsHeader } from '@material-tailwind/react'
 import { CariPengguna } from '../form/CariPengguna'
 import { PenggunaList } from '../cardList/PenggunaList'
 
-function TabsFollow({ handler, stateAktif }) {
+function TabsFollow({ handler, stateAktif, pencarianHandler }) {
     return (
         <Tabs value={stateAktif} className=" m-auto mt-2 flex flex-col gap-4 items-center flex-grow w-[90%]">
             <TabsHeader
@@ -17,7 +17,7 @@ function TabsFollow({ handler, stateAktif }) {
                 <Tab key='mengikuti' value='mengikuti' onClick={() => { handler('mengikuti') }}>Mengikuti</Tab>
             </TabsHeader>
             <TabsBody className='min-h-[100vh] flex flex-col items-center w-full'>
-                <CariPengguna />
+                <CariPengguna pencarianHandler={pencarianHandler} />
                 <PenggunaList />
             </TabsBody>
         </Tabs>

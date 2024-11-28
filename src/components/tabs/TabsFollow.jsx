@@ -5,7 +5,7 @@ import { PenggunaList } from '../cardList/PenggunaList'
 
 function TabsFollow({ handler, stateAktif }) {
     return (
-        <Tabs value={stateAktif} className=" m-auto mt-2 flex flex-col gap-4 items-center">
+        <Tabs value={stateAktif} className=" m-auto mt-2 flex flex-col gap-4 items-center flex-grow w-[90%]">
             <TabsHeader
                 className="rounded-none border-b border-blue-gray-50 bg-transparent p-0 gap-5 w-full flex flex-row justify-center items-center w-96"
                 indicatorProps={{
@@ -16,7 +16,7 @@ function TabsFollow({ handler, stateAktif }) {
                 <Tab key='cari' value='cari' onClick={() => { handler('cari') }} className='w-full'>Cari Pengguna</Tab >
                 <Tab key='mengikuti' value='mengikuti' onClick={() => { handler('mengikuti') }}>Mengikuti</Tab>
             </TabsHeader>
-            <TabsBody className='min-h-[100vh] flex flex-col items-center'>
+            <TabsBody className='min-h-[100vh] flex flex-col items-center w-full'>
                 <CariPengguna />
                 <PenggunaList />
             </TabsBody>

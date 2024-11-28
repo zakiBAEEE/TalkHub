@@ -8,7 +8,9 @@ function PenggunaList(Penggunas) {
             })
         } */}
     return (
-        <div className='flex  w-full flex-wrap justify-evenly'>
+        <div className='flex w-full flex-wrap justify-start gap-4'>
+            <CardPengguna />
+            <CardPengguna />
             <CardPengguna />
             <CardPengguna />
             <CardPengguna />
@@ -16,7 +18,6 @@ function PenggunaList(Penggunas) {
             <CardPengguna />
         </div>
     )
-
 }
 
 export { PenggunaList }

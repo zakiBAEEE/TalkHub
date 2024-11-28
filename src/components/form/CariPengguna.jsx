@@ -2,7 +2,7 @@ import { Input } from "@material-tailwind/react";
 
 function CariPengguna() {
     return (
-        <div className="w-72">
+        <div className="w-4/5">
             <Input
                 type="email"
                 placeholder="Email Address"

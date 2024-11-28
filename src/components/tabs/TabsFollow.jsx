@@ -16,7 +16,7 @@ function TabsFollow({ handler, stateAktif }) {
                 <Tab key='cari' value='cari' onClick={() => { handler('cari') }} className='w-full'>Cari Pengguna</Tab >
                 <Tab key='mengikuti' value='mengikuti' onClick={() => { handler('mengikuti') }}>Mengikuti</Tab>
             </TabsHeader>
-            <TabsBody className='min-h-[100vh]'>
+            <TabsBody className='min-h-[100vh] flex flex-col items-center'>
                 <CariPengguna />
                 <PenggunaList />
             </TabsBody>

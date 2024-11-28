@@ -8,7 +8,7 @@ function PenggunaList(Penggunas) {
             })
         } */}
     return (
-        <div className='flex w-full flex-wrap justify-evenly'>
+        <div className='flex  w-full flex-wrap justify-evenly'>
             <CardPengguna />
             <CardPengguna />
             <CardPengguna />

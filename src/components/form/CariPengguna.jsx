@@ -15,6 +15,7 @@ class CariPengguna extends React.Component {
                 value: event.target.value
             }
         })
+        this.props.pencarianHandler(this.state.value)
     }
     render() {
         return (

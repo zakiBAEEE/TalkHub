@@ -9,18 +9,13 @@ class HalamanFollow extends React.Component {
         super(props)
         this.state = {
             tabsAktif: 'cari',
-            pencarian: ""
         }
 
         this.onChangeTabsAktif = this.onChangeTabsAktif.bind(this)
     }
 
     onChangePencarian(inputanUser) {
-        this.setState((prevState) => {
-            return {
-                pencarian: inputanUser
-            }
-        })
+        console.log(inputanUser)
     }
 
     onChangeTabsAktif(tabsAktif) {

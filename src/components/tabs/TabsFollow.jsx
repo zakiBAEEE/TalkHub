@@ -1,5 +1,6 @@
 import React from 'react'
-import { Tab, Tabs, TabsHeader } from '@material-tailwind/react'
+import { Tab, Tabs, TabsBody, TabsHeader } from '@material-tailwind/react'
+import { CariPengguna } from '../form/CariPengguna'
 
 function TabsFollow({ handler, stateAktif }) {
     return (
@@ -14,6 +15,9 @@ function TabsFollow({ handler, stateAktif }) {
                 <Tab key='cari' value='cari' onClick={() => { handler('cari') }}>Cari Pengguna</Tab >
                 <Tab key='mengikuti' value='mengikuti' onClick={() => { handler('mengikuti') }}>Mengikuti</Tab>
             </TabsHeader>
+            <TabsBody>
+                <CariPengguna />
+            </TabsBody>
         </Tabs>
     )
 }

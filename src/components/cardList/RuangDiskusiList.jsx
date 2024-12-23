@@ -1,6 +1,6 @@
 import React from 'react'
 import { CardRuangDiskusi } from '../card/CardRuangDiskusi'
-
+import { Separator } from '../../separator/separator'
 
 function RuangDiskusiList(Penggunas) {
     {/* {
@@ -9,10 +9,14 @@ function RuangDiskusiList(Penggunas) {
             })
         } */}
     return (
-        <div className='flex w-full flex-wrap justify-start gap-4 mt-7'>
-            <CardRuangDiskusi />
-            <CardRuangDiskusi />
-        </div>
+        <>
+            <Separator namaSeparator={"Teknologi"} />
+            <div className='flex w-full flex-wrap justify-start gap-4 mt-4'>
+                <CardRuangDiskusi />
+                <CardRuangDiskusi />
+            </div>
+        </>
+
     )
 }
 

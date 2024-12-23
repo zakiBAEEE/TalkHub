@@ -2,6 +2,7 @@ import React from 'react'
 import { Tab, Tabs, TabsBody, TabsHeader } from '@material-tailwind/react'
 import { CariPengguna } from '../form/CariPengguna'
 import { TabsRuangmu } from './TabsRuangmu'
+import { CardRuangDiskusi } from '../card/CardRuangDiskusi'
 
 function TabsRuangDiskusi({ handler, stateAktif, pencarianHandler, handlerTabsDalamTabs, tabsDalamTabs }) {
     return (
@@ -19,7 +20,7 @@ function TabsRuangDiskusi({ handler, stateAktif, pencarianHandler, handlerTabsDa
             <TabsBody className='min-h-[100vh] flex flex-col items-center w-full'>
                 <CariPengguna pencarianHandler={pencarianHandler} />
                 {
-                    stateAktif == 'cari' ? "" : <TabsRuangmu handler={handlerTabsDalamTabs} stateAktif={tabsDalamTabs} />
+                    stateAktif == 'cari' ? <CardRuangDiskusi /> : <TabsRuangmu handler={handlerTabsDalamTabs} stateAktif={tabsDalamTabs} />
                 }
             </TabsBody>
         </Tabs>

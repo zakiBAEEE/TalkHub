@@ -4,11 +4,11 @@ import { CariPengguna } from '../form/CariPengguna'
 import { PenggunaList } from '../cardList/PenggunaList'
 import { TabsRuangmu } from './TabsRuangmu'
 
-function TabsFollow({ handler, stateAktif, pencarianHandler }) {
+function TabsFollow({ handler, stateAktif, pencarianHandler, handlerTabsDalamTabs, tabsDalamTabs }) {
     return (
         <Tabs value={stateAktif} className=" m-auto mt-2 flex flex-col gap-4 items-center flex-grow w-[90%]">
             <TabsHeader
-                className="rounded-none border-b border-blue-gray-50 bg-transparent p-0 gap-5 w-full flex flex-row justify-center items-center w-96"
+                className="rounded-none border-b border-blue-gray-50 bg-transparent p-0 gap-5 flex flex-row justify-center items-center w-96"
                 indicatorProps={{
                     className:
                         "bg-transparent border-b-2 border-gray-900 shadow-none rounded-none",
@@ -20,7 +20,7 @@ function TabsFollow({ handler, stateAktif, pencarianHandler }) {
             <TabsBody className='min-h-[100vh] flex flex-col items-center w-full'>
                 <CariPengguna pencarianHandler={pencarianHandler} />
                 {
-                    stateAktif == 'cari' ? <PenggunaList /> : <TabsRuangmu />
+                    stateAktif == 'cari' ? <PenggunaList /> : <TabsRuangmu handler={handlerTabsDalamTabs} stateAktif={tabsDalamTabs} />
                 }
             </TabsBody>
         </Tabs>

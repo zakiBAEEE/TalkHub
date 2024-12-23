@@ -13,11 +13,11 @@ function TabsRuangmu({ handler, stateAktif }) {
                             "bg-transparent border-b-2 border-gray-900 shadow-none rounded-none",
                     }}
                 >
-                    <Tab key='cari' value='cari' onClick={() => { handler('cari') }} className='w-full'>
+                    <Tab key='mengikuti' value='mengikuti' onClick={() => { handler('mengikuti') }} className='w-full'>
                         Mengikuti
                     </Tab>
 
-                    <Tab key='mengikuti' value='mengikuti' onClick={() => { handler('mengikuti') }} className='w-full'>
+                    <Tab key='ruang mu' value='ruang mu' onClick={() => { handler('ruang mu') }} className='w-full'>
                         Ruang Mu
                     </Tab>
                 </TabsHeader>

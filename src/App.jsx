@@ -4,11 +4,12 @@ import { Sidebar } from './components/sidebar/Sidebar'
 import { HalamanBeranda } from './pages/HalamanBeranda'
 import { HalamanFollow } from './pages/HalamanFollow'
 import { CardRuangDiskusi } from './components/card/CardRuangDiskusi'
+import { HalamanDiskusi } from './pages/HalamanDiskusi'
 
 
 function App() {
   return (
-    <HalamanFollow />
+    <HalamanDiskusi />
   )
 }
 

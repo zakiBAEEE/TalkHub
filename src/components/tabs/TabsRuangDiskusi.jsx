@@ -1,9 +1,9 @@
 import React from 'react'
 import { Tab, Tabs, TabsBody, TabsHeader } from '@material-tailwind/react'
 import { CariPengguna } from '../form/CariPengguna'
+import { TabsRuangmu } from './TabsRuangmu'
 
-
-function TabsFollow({ handler, stateAktif, pencarianHandler, handlerTabsDalamTabs, tabsDalamTabs }) {
+function TabsRuangDiskusi({ handler, stateAktif, pencarianHandler, handlerTabsDalamTabs, tabsDalamTabs }) {
     return (
         <Tabs value={stateAktif} className=" m-auto mt-2 flex flex-col gap-4 items-center flex-grow w-[90%]">
             <TabsHeader
@@ -13,17 +13,17 @@ function TabsFollow({ handler, stateAktif, pencarianHandler, handlerTabsDalamTab
                         "bg-transparent border-b-2 border-gray-900 shadow-none rounded-none",
                 }}
             >
-                <Tab key='cari' value='cari' onClick={() => { handler('cari') }} className='w-full'>Cari Pengguna</Tab >
-                <Tab key='mengikuti' value='mengikuti' onClick={() => { handler('mengikuti') }}>Mengikuti</Tab>
+                <Tab key='cari' value='cari' onClick={() => { handler('cari') }} className='w-full'>Cari Ruang</Tab >
+                <Tab key='mengikuti' value='mengikuti' onClick={() => { handler('mengikuti') }}>Ruang Mu</Tab>
             </TabsHeader>
             <TabsBody className='min-h-[100vh] flex flex-col items-center w-full'>
                 <CariPengguna pencarianHandler={pencarianHandler} />
                 {
-                    stateAktif == 'cari' ? "" : ""
+                    stateAktif == 'cari' ? "" : <TabsRuangmu handler={handlerTabsDalamTabs} stateAktif={tabsDalamTabs} />
                 }
             </TabsBody>
         </Tabs>
     )
 }
 
-export { TabsFollow }
+export { TabsRuangDiskusi }

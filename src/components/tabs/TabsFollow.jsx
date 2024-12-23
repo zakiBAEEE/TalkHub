@@ -18,7 +18,9 @@ function TabsFollow({ handler, stateAktif, pencarianHandler }) {
             </TabsHeader>
             <TabsBody className='min-h-[100vh] flex flex-col items-center w-full'>
                 <CariPengguna pencarianHandler={pencarianHandler} />
-                <PenggunaList />
+                {
+                    stateAktif == 'cari' ? <PenggunaList /> : ""
+                }
             </TabsBody>
         </Tabs>
     )

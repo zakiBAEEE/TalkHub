@@ -14,7 +14,6 @@ class Sidebar extends React.Component {
 
         this.toggleSidebar = this.toggleSidebar.bind(this);
     }
-
     toggleSidebar() {
         this.setState((prevState) => {
             return {
@@ -22,9 +21,7 @@ class Sidebar extends React.Component {
             }
         })
     }
-
     render() {
-
         return (
             <div className={`transition-all duration-900 ease-out ${this.state.isSidebarOn ? 'w-[12rem]' : 'w-20'
                 }`}
@@ -38,5 +35,4 @@ class Sidebar extends React.Component {
         )
     }
 }
-
 export { Sidebar }

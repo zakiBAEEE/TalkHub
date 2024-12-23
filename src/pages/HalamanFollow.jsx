@@ -19,9 +19,7 @@ class HalamanFollow extends React.Component {
 
     onChangeTabsAktif(tabsAktif) {
         this.setState((prevState) => {
-            // Agar halaman tidak refresh apabila terjadi perubahan state ketika state nya tidak berubah
             if (prevState.tabsAktif != tabsAktif) {
-                console.log(tabsAktif)
                 return {
                     tabsAktif: tabsAktif
                 }

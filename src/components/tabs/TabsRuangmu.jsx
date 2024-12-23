@@ -1,5 +1,6 @@
 import React from 'react'
 import { Tab, Tabs, TabsBody, TabsHeader } from '@material-tailwind/react'
+import { TombolBuat } from '../tombol/Tombol'
 
 
 function TabsRuangmu({ handler, stateAktif }) {
@@ -25,8 +26,8 @@ function TabsRuangmu({ handler, stateAktif }) {
             </div>
             <TabsBody className='min-h-[100vh] flex flex-col items-center w-full'>
                 {
-                    stateAktif == 'cari' ? "" :
-                        ""
+                    stateAktif == 'mengikuti' ? "" :
+                        <TombolBuat namaTombol={"Buat Ruang"} />
                 }
             </TabsBody>
         </Tabs>

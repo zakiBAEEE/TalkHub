@@ -3,7 +3,7 @@ import { CardRuangDiskusi } from '../card/CardRuangDiskusi'
 import { Separator } from '../separator/separator'
 
 
-function RuangDiskusiList(Penggunas) {
+function RuangDiskusiList({ namaTab }) {
     {/* {
             Penggunas.map((Pengguna) => {
                 return <CardPengguna/>

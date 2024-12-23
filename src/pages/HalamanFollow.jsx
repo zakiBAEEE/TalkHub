@@ -10,7 +10,6 @@ class HalamanFollow extends React.Component {
         this.state = {
             tabsAktif: 'cari',
         }
-
         this.onChangeTabsAktif = this.onChangeTabsAktif.bind(this)
     }
 

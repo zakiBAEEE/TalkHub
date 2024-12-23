@@ -1,6 +1,7 @@
 import React from 'react'
 import { CardRuangDiskusi } from '../card/CardRuangDiskusi'
-import { Separator } from '../../separator/separator'
+import { Separator } from '../separator/separator'
+
 
 function RuangDiskusiList(Penggunas) {
     {/* {

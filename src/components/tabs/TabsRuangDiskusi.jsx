@@ -15,7 +15,7 @@ function TabsRuangDiskusi({ handler, stateAktif, pencarianHandler, handlerTabsDa
                 }}
             >
                 <Tab key='cari' value='cari' onClick={() => { handler('cari') }} className='w-full'>Cari Ruang</Tab >
-                <Tab key='mengikuti' value='mengikuti' onClick={() => { handler('mengikuti') }}>Ruang Mu</Tab>
+                <Tab key='ruang mu' value='ruang mu' onClick={() => { handler('ruang mu') }}>Ruang Mu</Tab>
             </TabsHeader>
             <TabsBody className='min-h-[100vh] flex flex-col items-center w-full'>
                 <CariPengguna pencarianHandler={pencarianHandler} />

@@ -49,7 +49,7 @@ class HalamanDiskusi extends React.Component {
     render() {
         return (
             <div className='flex bg-blue-gray-50' >
-                <Sidebar />
+                <Sidebar toggleSidebar={this.props.toggleSidebar} isSidebarOn={this.props.isSidebarOn} />
                 <div className=' w-full  flex flex-col'>
                     <TabsRuangDiskusi handler={this.onChangeTabsAktif} stateAktif={this.state.tabsAktif} className="h-auto" pencarianHandler={this.onChangePencarian} handlerTabsDalamTabs={this.onChangeTabsDalamTabs} tabsDalamTabs={this.state.tabsDalamTabs} handlerTombolBuatRuang={this.onBuatHalamanDiskusi} handlerDetailRuangDiskusi={this.onDetailHalamanDiskusi} />
                 </div>

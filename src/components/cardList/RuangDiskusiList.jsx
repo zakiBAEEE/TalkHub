@@ -3,7 +3,7 @@ import { CardRuangDiskusi } from '../card/CardRuangDiskusi'
 import { Separator } from '../separator/separator'
 
 
-function RuangDiskusiList({ namaTab }) {
+function RuangDiskusiList({ namaTab, handlerDetailRuangDiskusi }) {
     {/* {
             Penggunas.map((Pengguna) => {
                 return <CardPengguna/>
@@ -13,7 +13,7 @@ function RuangDiskusiList({ namaTab }) {
         <>
             <Separator namaSeparator={"Teknologi"} />
             <div className='flex w-full flex-wrap justify-start gap-4 mt-4'>
-                <CardRuangDiskusi />
+                <CardRuangDiskusi handlerDetailRuangDiskusi={handlerDetailRuangDiskusi} />
                 <CardRuangDiskusi />
             </div>
         </>

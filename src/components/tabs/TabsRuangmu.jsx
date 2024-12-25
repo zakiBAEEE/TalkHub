@@ -3,7 +3,7 @@ import { Tab, Tabs, TabsBody, TabsHeader } from '@material-tailwind/react'
 import { TombolBuat } from '../tombol/Tombol'
 
 
-function TabsRuangmu({ handler, stateAktif, handlerTombolBuatRuang }) {
+function TabsRuangmu({ handler, stateAktif, handlerTombolBuatRuang, handlerDetailRuangDiskusi }) {
     return (
         <Tabs value={stateAktif} className=" m-auto mt-6 flex flex-col gap-4 items-start flex-grow w-[90%]">
             <div className="w-full">

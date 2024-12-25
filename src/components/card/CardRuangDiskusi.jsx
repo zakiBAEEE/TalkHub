@@ -8,9 +8,9 @@ import {
     Tooltip,
 } from "@material-tailwind/react";
 
-export function CardRuangDiskusi() {
+export function CardRuangDiskusi({ handlerDetailRuangDiskusi }) {
     return (
-        <Card className="w-64 h-72 overflow-hidden flex flex-col">
+        <Card className="w-64 h-72 overflow-hidden flex flex-col cursor-pointer" onClick={handlerDetailRuangDiskusi}>
             <CardHeader
                 floated={false}
                 shadow={false}
@@ -25,7 +25,7 @@ export function CardRuangDiskusi() {
             </CardHeader>
             <CardBody className="h-2/3 overflow-auto">
                 <Typography variant="h5" color="blue-gray">
-                    UI/UX Review Check
+                    Diskusi IT
                 </Typography>
                 <Typography variant="small" color="gray" className="mt-3 font-normal">
                     Because it&apos;s about motivating the doers. Because I&apos;m here to

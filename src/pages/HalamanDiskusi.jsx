@@ -12,6 +12,11 @@ class HalamanDiskusi extends React.Component {
         }
         this.onChangeTabsAktif = this.onChangeTabsAktif.bind(this)
         this.onChangeTabsDalamTabs = this.onChangeTabsDalamTabs.bind(this)
+        this.onDetailHalamanDiskusi = this.onDetailHalamanDiskusi.bind(this)
+    }
+
+    onDetailHalamanDiskusi() {
+        console.log("HALAMAN DETAIL RUANG DISKUSI")
     }
 
     onChangePencarian(inputanUser) {
@@ -46,7 +51,7 @@ class HalamanDiskusi extends React.Component {
             <div className='flex bg-blue-gray-50' >
                 <Sidebar />
                 <div className=' w-full  flex flex-col'>
-                    <TabsRuangDiskusi handler={this.onChangeTabsAktif} stateAktif={this.state.tabsAktif} className="h-auto" pencarianHandler={this.onChangePencarian} handlerTabsDalamTabs={this.onChangeTabsDalamTabs} tabsDalamTabs={this.state.tabsDalamTabs} handlerTombolBuatRuang={this.onBuatHalamanDiskusi} />
+                    <TabsRuangDiskusi handler={this.onChangeTabsAktif} stateAktif={this.state.tabsAktif} className="h-auto" pencarianHandler={this.onChangePencarian} handlerTabsDalamTabs={this.onChangeTabsDalamTabs} tabsDalamTabs={this.state.tabsDalamTabs} handlerTombolBuatRuang={this.onBuatHalamanDiskusi} handlerDetailRuangDiskusi={this.onDetailHalamanDiskusi} />
                 </div>
             </div>
         )

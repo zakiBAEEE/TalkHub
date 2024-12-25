@@ -16,7 +16,7 @@ class HalamanDiskusi extends React.Component {
     }
 
     onDetailHalamanDiskusi() {
-        console.log("HALAMAN DETAIL RUANG DISKUSI")
+
     }
 
     onChangePencarian(inputanUser) {

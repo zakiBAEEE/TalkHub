@@ -9,3 +9,5 @@ class DetailHalamanRuangDiskusi extends React.Component {
         )
     }
 }
+
+export { DetailHalamanRuangDiskusi }

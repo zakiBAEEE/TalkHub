@@ -14,7 +14,7 @@ function RuangDiskusiList({ namaTab, handlerDetailRuangDiskusi }) {
             <Separator namaSeparator={"Teknologi"} />
             <div className='flex w-full flex-wrap justify-start gap-4 mt-4'>
                 <CardRuangDiskusi handlerDetailRuangDiskusi={handlerDetailRuangDiskusi} />
-                <CardRuangDiskusi />
+                <CardRuangDiskusi handlerDetailRuangDiskusi={handlerDetailRuangDiskusi} />
             </div>
         </>
 

@@ -1,7 +1,14 @@
 import React from 'react'
 import { Sidebar } from '../components/sidebar/Sidebar'
 import { TabsRuangDiskusi } from '../components/tabs/TabsRuangDiskusi'
+import { useNavigate } from 'react-router-dom';
 
+function withRouter(Component) {
+    return function (props) {
+        const navigate = useNavigate();
+        return <Component {...props} navigate={navigate} />;
+    };
+}
 
 class HalamanDiskusi extends React.Component {
     constructor(props) {
@@ -16,9 +23,9 @@ class HalamanDiskusi extends React.Component {
     }
 
     onDetailHalamanDiskusi() {
-
+        // Navigasi menggunakan navigate dari props
+        this.props.navigate('/diskusi/HalamanDetail');
     }
-
     onChangePencarian(inputanUser) {
         console.log(inputanUser)
     }
@@ -58,6 +65,6 @@ class HalamanDiskusi extends React.Component {
     }
 }
 
-export { HalamanDiskusi }
+export default withRouter(HalamanDiskusi);
 
 

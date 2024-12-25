@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from "react-router-dom";
 
 import {
     Card,
@@ -28,31 +29,39 @@ function SidebarOn({ toggleHandler }) {
 
             </div>
             <div className='flex flex-col gap-5'>
+                <Link to="/">
+                    <ListItem>
+                        <ListItemPrefix>
+                            <HomeIcon className="h-5 w-5" />
+                        </ListItemPrefix>
+                        Beranda
+                    </ListItem>
+                </Link>
+                <Link to="/follow">
+                    <ListItem>
+                        <ListItemPrefix>
+                            <UserPlusIcon className="h-5 w-5" />
+                        </ListItemPrefix>
+                        Follow
+                    </ListItem>
+                </Link>
+                <Link to="/diskusi">
+                    <ListItem>
+                        <ListItemPrefix>
+                            <ChatBubbleBottomCenterIcon className="h-5 w-5" />
+                        </ListItemPrefix>
+                        Diskusi
+                    </ListItem>
+                </Link>
                 <ListItem>
-                    <ListItemPrefix>
-                        <HomeIcon className="h-5 w-5" />
-                    </ListItemPrefix>
-                    Beranda
-                </ListItem>
-                <ListItem>
-                    <ListItemPrefix>
-                        <UserPlusIcon className="h-5 w-5" />
-                    </ListItemPrefix>
-                    Follow
-                </ListItem>
-                <ListItem>
-                    <ListItemPrefix>
-                        <ChatBubbleBottomCenterIcon className="h-5 w-5" />
-                    </ListItemPrefix>
-                    Diskusi
-                </ListItem>
-                <ListItem>
+                    {/* <Link to="/"></Link> */}
                     <ListItemPrefix>
                         <UserCircleIcon className="h-5 w-5" />
                     </ListItemPrefix>
                     Profile
                 </ListItem>
                 <ListItem>
+                    {/* <Link to="/"></Link> */}
                     <ListItemPrefix>
                         <PowerIcon className="h-5 w-5" />
                     </ListItemPrefix>

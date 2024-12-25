@@ -1,5 +1,5 @@
 import React from 'react'
-
+import { Link } from "react-router-dom";
 import {
     Card,
     Typography,
@@ -29,19 +29,34 @@ function SidebarOf({ toggleHandler }) {
             </div>
             <div className='flex flex-col gap-5'>
                 <ListItem>
-                    <HomeIcon className="h-5 w-5" />
+                    <Link to="/">
+                        <HomeIcon className="h-5 w-5" />
+                    </Link>
+
                 </ListItem>
                 <ListItem>
-                    <UserPlusIcon className="h-5 w-5" />
+                    <Link to="/follow">
+                        <UserPlusIcon className="h-5 w-5" />
+                    </Link>
+
                 </ListItem>
                 <ListItem>
-                    <ChatBubbleBottomCenterIcon className="h-5 w-5" />
+                    <Link to="/diskusi">
+                        <ChatBubbleBottomCenterIcon className="h-5 w-5" />
+                    </Link>
+
                 </ListItem>
                 <ListItem>
-                    <UserCircleIcon className="h-5 w-5" />
+                    <Link to="/profile">
+                        <UserCircleIcon className="h-5 w-5" />
+                    </Link>
+
                 </ListItem>
                 <ListItem>
+
                     <PowerIcon className="h-5 w-5" />
+
+
                 </ListItem>
             </div>
 

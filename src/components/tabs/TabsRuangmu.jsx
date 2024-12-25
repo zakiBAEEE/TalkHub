@@ -27,7 +27,9 @@ function TabsRuangmu({ handler, stateAktif, handlerTombolBuatRuang }) {
             <TabsBody className='min-h-[100vh] flex flex-col items-center w-full'>
                 {
                     stateAktif == 'mengikuti' ? "" :
-                        <TombolBuat namaTombol={"Buat Ruang"} handler={handlerTombolBuatRuang} />
+                        <div className='w-full'>
+                            <TombolBuat namaTombol={"Buat Ruang"} handler={handlerTombolBuatRuang} />
+                        </div>
                 }
             </TabsBody>
         </Tabs>

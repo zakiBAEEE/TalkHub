@@ -18,7 +18,7 @@ function TabsRuangmu({ handler, stateAktif, handlerTombolBuatRuang }) {
                         Mengikuti
                     </Tab>
 
-                    <Tab key='ruang mu' value='ruang mu' onClick={() => { handler('ruang mu2') }} className='w-full'>
+                    <Tab key='ruang mu2' value='ruang mu2' onClick={() => { handler('ruang mu2') }} className='w-full'>
                         Ruang Mu
                     </Tab>
                 </TabsHeader>

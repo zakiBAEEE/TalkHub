@@ -3,7 +3,7 @@ import { Tab, Tabs, TabsBody, TabsHeader } from '@material-tailwind/react'
 import { TombolBuat } from '../tombol/Tombol'
 
 
-function TabsRuangmu({ handler, stateAktif }) {
+function TabsRuangmu({ handler, stateAktif, handlerTombolBuatRuang }) {
     return (
         <Tabs value={stateAktif} className=" m-auto mt-6 flex flex-col gap-4 items-start flex-grow w-[90%]">
             <div className="w-full">
@@ -27,7 +27,7 @@ function TabsRuangmu({ handler, stateAktif }) {
             <TabsBody className='min-h-[100vh] flex flex-col items-center w-full'>
                 {
                     stateAktif == 'mengikuti' ? "" :
-                        <TombolBuat namaTombol={"Buat Ruang"} />
+                        <TombolBuat namaTombol={"Buat Ruang"} handler={handlerTombolBuatRuang} />
                 }
             </TabsBody>
         </Tabs>

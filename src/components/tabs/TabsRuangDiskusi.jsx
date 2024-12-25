@@ -4,7 +4,7 @@ import { CariPengguna } from '../form/CariPengguna'
 import { TabsRuangmu } from './TabsRuangmu'
 import { RuangDiskusiList } from '../cardList/RuangDiskusiList'
 
-function TabsRuangDiskusi({ handler, stateAktif, pencarianHandler, handlerTabsDalamTabs, tabsDalamTabs }) {
+function TabsRuangDiskusi({ handler, stateAktif, pencarianHandler, handlerTabsDalamTabs, tabsDalamTabs, handlerTombolBuatRuang }) {
     return (
         <Tabs value={stateAktif} className=" m-auto mt-2 flex flex-col gap-4 items-center flex-grow w-[90%]">
             <TabsHeader
@@ -20,7 +20,7 @@ function TabsRuangDiskusi({ handler, stateAktif, pencarianHandler, handlerTabsDa
             <TabsBody className='min-h-[100vh] flex flex-col items-center w-full'>
                 <CariPengguna pencarianHandler={pencarianHandler} />
                 {
-                    stateAktif == 'cari' ? <RuangDiskusiList /> : <TabsRuangmu handler={handlerTabsDalamTabs} stateAktif={tabsDalamTabs} />
+                    stateAktif == 'cari' ? <RuangDiskusiList /> : <TabsRuangmu handler={handlerTabsDalamTabs} stateAktif={tabsDalamTabs} handlerTombolBuatRuang={handlerTombolBuatRuang} />
                 }
             </TabsBody>
         </Tabs>

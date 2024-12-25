@@ -18,6 +18,10 @@ class HalamanDiskusi extends React.Component {
         console.log(inputanUser)
     }
 
+    onBuatHalamanDiskusi(event) {
+        console.log(event)
+    }
+
     onChangeTabsDalamTabs(tabs) {
         this.setState((prevState) => {
             if (prevState.tabsDalamTabs != tabs) {
@@ -42,7 +46,7 @@ class HalamanDiskusi extends React.Component {
             <div className='flex bg-blue-gray-50' >
                 <Sidebar />
                 <div className=' w-full  flex flex-col'>
-                    <TabsRuangDiskusi handler={this.onChangeTabsAktif} stateAktif={this.state.tabsAktif} className="h-auto" pencarianHandler={this.onChangePencarian} handlerTabsDalamTabs={this.onChangeTabsDalamTabs} tabsDalamTabs={this.state.tabsDalamTabs} />
+                    <TabsRuangDiskusi handler={this.onChangeTabsAktif} stateAktif={this.state.tabsAktif} className="h-auto" pencarianHandler={this.onChangePencarian} handlerTabsDalamTabs={this.onChangeTabsDalamTabs} tabsDalamTabs={this.state.tabsDalamTabs} handlerTombolBuatRuang={this.onBuatHalamanDiskusi} />
                 </div>
             </div>
         )

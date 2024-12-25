@@ -28,35 +28,39 @@ function SidebarOf({ toggleHandler }) {
                 </button>
             </div>
             <div className='flex flex-col gap-5'>
-                <ListItem>
-                    <Link to="/">
+                <Link to="/">
+                    <ListItem>
+
                         <HomeIcon className="h-5 w-5" />
-                    </Link>
 
-                </ListItem>
-                <ListItem>
-                    <Link to="/follow">
+                    </ListItem>
+                </Link>
+                <Link to="/follow">
+                    <ListItem>
+
                         <UserPlusIcon className="h-5 w-5" />
-                    </Link>
 
-                </ListItem>
-                <ListItem>
-                    <Link to="/diskusi">
+
+                    </ListItem>
+                </Link>
+                <Link to="/diskusi">
+                    <ListItem>
+
                         <ChatBubbleBottomCenterIcon className="h-5 w-5" />
-                    </Link>
 
-                </ListItem>
-                <ListItem>
-                    <Link to="/profile">
+
+                    </ListItem>
+                </Link>
+                <Link to="/profile">
+                    <ListItem>
+
                         <UserCircleIcon className="h-5 w-5" />
-                    </Link>
 
-                </ListItem>
+
+                    </ListItem>
+                </Link>
                 <ListItem>
-
                     <PowerIcon className="h-5 w-5" />
-
-
                 </ListItem>
             </div>
 

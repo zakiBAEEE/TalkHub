@@ -53,13 +53,17 @@ function SidebarOn({ toggleHandler }) {
                         Diskusi
                     </ListItem>
                 </Link>
-                <ListItem>
-                    {/* <Link to="/"></Link> */}
-                    <ListItemPrefix>
-                        <UserCircleIcon className="h-5 w-5" />
-                    </ListItemPrefix>
-                    Profile
-                </ListItem>
+
+                <Link to="/profile">
+                    <ListItem>
+                        <ListItemPrefix>
+                            <UserCircleIcon className="h-5 w-5" />
+                        </ListItemPrefix>
+                        Profile
+                    </ListItem>
+                </Link>
+
+
                 <ListItem>
                     {/* <Link to="/"></Link> */}
                     <ListItemPrefix>

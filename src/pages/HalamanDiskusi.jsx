@@ -24,7 +24,7 @@ class HalamanDiskusi extends React.Component {
 
     onDetailHalamanDiskusi() {
         // Navigasi menggunakan navigate dari props
-        this.props.navigate('/diskusi/HalamanDetail');
+        this.props.navigate('HalamanDetail');
     }
     onChangePencarian(inputanUser) {
         console.log(inputanUser)

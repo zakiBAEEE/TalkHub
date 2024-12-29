@@ -5,7 +5,7 @@ class DetailHalamanRuangDiskusi extends React.Component {
     render() {
         return (
             <div className="relative flex flex-col w-full h-full">
-                <div className="absolute top-2 left-2">
+                <div className="absolute top-[2rem] left-[2rem]">
                     <TombolBack handler={""} />
                 </div>
                 <div className="w-2/3 bg-amber-700 h-[14rem] m-auto">

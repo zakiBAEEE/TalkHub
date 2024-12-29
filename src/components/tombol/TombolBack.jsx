@@ -1,7 +1,8 @@
 import React from 'react'
+import { FaArrowLeft } from 'react-icons/fa'
 function TombolBack({ handler }) {
     return (
-        <FontAwesomeIcon icon="fa-solid fa-arrow-left" />
+        <FaArrowLeft size={25} />
     )
 }
 

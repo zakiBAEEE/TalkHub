@@ -1,6 +1,6 @@
 import React from 'react'
 import { Tab, Tabs, TabsBody, TabsHeader } from '@material-tailwind/react'
-import { TombolBuat } from '../tombol/Tombol'
+import { TombolBuat } from '../tombol/TombolBuat'
 
 
 function TabsRuangmu({ handler, stateAktif, handlerTombolBuatRuang, handlerDetailRuangDiskusi }) {

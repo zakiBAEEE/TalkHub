@@ -1,9 +1,9 @@
 import { Input } from "@material-tailwind/react";
-import { useInput } from "../customHooks/useInput";
+import { useSearch } from "../customHooks/useSearch";
 import PropTypes from "prop-types";
 
 function SearchBar({ placeholder }) {
-    const [input, onInputChange] = useInput();
+    const [input, onInputChange] = useSearch();
 
     return (
         <div className="w-4/5">

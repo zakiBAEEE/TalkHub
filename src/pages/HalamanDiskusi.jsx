@@ -1,77 +1,31 @@
 import { useState } from 'react'
-import { TabsRuangDiskusi } from '../components/tabs/TabsRuangDiskusi'
-import { useNavigate } from 'react-router-dom';
+import { SearchBar } from '../components/form/SearchBar';
+import { mainTabs, subTabs } from '../components/utils/tabsDiskusi';
+import { Tabs } from '../components/tabs/Tabs';
+import { RuangDiskusiList } from '../components/cardList/RuangDiskusiList';
 
 function HalamanDiskusi() {
-    const navigate = useNavigate();
-    const [tabsAktif, setTabsAktif] = useState('cari');
-    const [tabsDalamTabsAktif, setTabsDalamTabsAktif] = useState('mengikuti');
+    const [activeTab, setActiveTab] = useState('cariRuang');
+    const [activeChildTab, setActiveChildTab] = useState('mengikuti');
+
+    return (
+        <div className=' w-full  flex flex-col'>
+            <SearchBar placeholder='Cari Ruang Diskusi' />
+            <Tabs tabs={mainTabs} activeTab={activeTab} setActiveTab={setActiveTab} />
+            {
+                activeTab == 'cariRuang' ? (<RuangDiskusiList />) : (
+                    <div className='m-auto mt-6 flex flex-col gap-4 items-start flex-grow w-[90%]'>
+                        <Tabs tabs={subTabs} activeTab={activeChildTab} setActiveTab={setActiveChildTab} />
+                        {
+                            activeChildTab == 'mengikuti' ? (<RuangDiskusiList />) : (<RuangDiskusiList />)
+                        }
+                    </div>
+                )
+            }
+        </div>
+    )
+
 }
 
 export { HalamanDiskusi }
-
-// function withRouter(Component) {
-//     return function (props) {
-//         const navigate = useNavigate();
-//         return <Component {...props} navigate={navigate} />;
-//     };
-// }
-
-// class HalamanDiskusi extends React.Component {
-//     constructor(props) {
-//         super(props)
-//         this.state = {
-//             tabsAktif: 'cari',
-//             tabsDalamTabs: 'mengikuti'
-//         }
-//         this.onChangeTabsAktif = this.onChangeTabsAktif.bind(this)
-//         this.onChangeTabsDalamTabs = this.onChangeTabsDalamTabs.bind(this)
-//         this.onDetailHalamanDiskusi = this.onDetailHalamanDiskusi.bind(this)
-//     }
-
-//     onDetailHalamanDiskusi() {
-//         // Navigasi menggunakan navigate dari props
-//         this.props.navigate('HalamanDetail');
-//     }
-//     onChangePencarian(inputanUser) {
-//         console.log(inputanUser)
-//     }
-
-//     onBuatHalamanDiskusi(event) {
-//         console.log(event)
-//     }
-
-//     onChangeTabsDalamTabs(tabs) {
-//         this.setState((prevState) => {
-//             if (prevState.tabsDalamTabs != tabs) {
-//                 return {
-//                     tabsDalamTabs: tabs
-//                 }
-//             }
-//         })
-//     }
-
-//     onChangeTabsAktif(tabsAktif) {
-//         this.setState((prevState) => {
-//             if (prevState.tabsAktif != tabsAktif) {
-//                 return {
-//                     tabsAktif: tabsAktif
-//                 }
-//             }
-//         })
-//     }
-//     render() {
-//         return (
-//             <div className='flex bg-blue-gray-50' >
-//                 <Sidebar toggleSidebar={this.props.toggleSidebar} isSidebarOn={this.props.isSidebarOn} />
-//                 <div className=' w-full  flex flex-col'>
-//                     <TabsRuangDiskusi handler={this.onChangeTabsAktif} stateAktif={this.state.tabsAktif} className="h-auto" pencarianHandler={this.onChangePencarian} handlerTabsDalamTabs={this.onChangeTabsDalamTabs} tabsDalamTabs={this.state.tabsDalamTabs} handlerTombolBuatRuang={this.onBuatHalamanDiskusi} handlerDetailRuangDiskusi={this.onDetailHalamanDiskusi} />
-//                 </div>
-//             </div>
-//         )
-//     }
-// }
-
-// export default withRouter(HalamanDiskusi);
-
 

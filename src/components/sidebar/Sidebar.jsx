@@ -1,8 +1,8 @@
-
-
+// eslint-disable-next-line no-unused-vars
 import React from 'react'
 import { SidebarOn } from './SidebarOn';
 import { SidebarOf } from './SidebarOf';
+import PropTypes from 'prop-types';
 
 function Sidebar({ isSidebarOn, toggleSidebar }) {
     return (
@@ -16,5 +16,10 @@ function Sidebar({ isSidebarOn, toggleSidebar }) {
             )}
         </div>
     )
+}
+
+Sidebar.propTypes = {
+    isSidebarOn: PropTypes.bool.isRequired,
+    toggleSidebar: PropTypes.func.isRequired
 }
 export { Sidebar }

@@ -15,9 +15,10 @@ function App() {
   }
 
   return (
-    <div className='flex bg-blue-gray-50 min-h-[100vh]'>
+    <div className='flex bg-blue-gray-50 min-h-[100vh] '>
       <Sidebar toggleHandler={toggleSidebar} isSidebarOn={isSidebarOn} />
-      <div className='flex flex-col flex-1'>
+      <div className={`flex-1 transition-all duration-900 ease-out ${isSidebarOn ? '' : 'ml-[2rem]'
+        }`}>
         < Routes>
           <Route path="/" element={<HalamanBeranda toggleSidebar={toggleSidebar} isSidebarOn={isSidebarOn} />} />
           <Route path="/diskusi" element={<HalamanDiskusi toggleSidebar={toggleSidebar} isSidebarOn={isSidebarOn} />} />

@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 
 function Tabs({ tabs, activeTab, setActiveTab }) {
     return (
-        <div className="flex items-center border-b border-gray-300 pb-2">
+        <div className="flex items-center  pb-2">
             {tabs.map((tab, index) => (
                 <button
                     key={index}

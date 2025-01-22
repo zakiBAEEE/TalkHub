@@ -9,9 +9,11 @@ function HalamanDiskusi() {
     const [activeChildTab, setActiveChildTab] = useState('mengikuti');
 
     return (
-        <div className=' w-full  flex flex-col'>
-            <SearchBar placeholder='Cari Ruang Diskusi' />
-            <Tabs tabs={mainTabs} activeTab={activeTab} setActiveTab={setActiveTab} />
+        <div className='flex flex-col'>
+            <div className='flex flex-col items-center py-3'>
+                <Tabs tabs={mainTabs} activeTab={activeTab} setActiveTab={setActiveTab} />
+                <SearchBar placeholder='Cari Ruang Diskusi' />
+            </div>
             {
                 activeTab == 'cariRuang' ? (<RuangDiskusiList />) : (
                     <div className='m-auto mt-6 flex flex-col gap-4 items-start flex-grow w-[90%]'>

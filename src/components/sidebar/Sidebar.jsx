@@ -8,7 +8,7 @@ function Sidebar({ isSidebarOn, toggleHandler }) {
         <div className={`transition-all duration-900 ease-out ${isSidebarOn ? 'w-[12rem]' : 'w-20'
             }`}
         >
-            <Card className="h-[calc(100vh)] w-full max-w-[12rem] p-4 shadow-xl shadow-blue-gray-900/5 bg-white fixed">
+            <Card className='h-[calc(100vh)] max-w-[10rem] p-4 shadow-xl shadow-blue-gray-900/5 bg-white fixed'>
                 <div className="mb-2 p-4">
                     <button>
                         <Typography variant="h5" color="blue-gray" onClick={toggleHandler}>

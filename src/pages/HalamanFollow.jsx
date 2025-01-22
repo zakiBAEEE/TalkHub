@@ -7,12 +7,12 @@ function HalamanFollow() {
     const [activeTabs, setActiveTab] = useState('cariPengguna');
 
     return (
-        <div className='flex bg-blue-gray-50' >
-            <div className=' w-full  flex flex-col'>
-                <Tabs tabs={mainTabs} activeTab={activeTabs} setActiveTab={setActiveTab} />
-                <SearchBar />
-            </div>
+
+        <div className='flex flex-col items-center py-3'>
+            <Tabs tabs={mainTabs} activeTab={activeTabs} setActiveTab={setActiveTab} />
+            <SearchBar placeholder='Cari Pengguna' />
         </div>
+
     )
 }
 

@@ -1,4 +1,3 @@
-import React from 'react'
 import { CardPostingan } from '../card/CardPostingan'
 function PostinganList({ postingans }) {
     return (
@@ -8,6 +7,7 @@ function PostinganList({ postingans }) {
                 return <CardPostingan komentar={comentar.komentar} likes={comentar.likes} dislikes={comentar.dislikes} penggunaId={comentar.penggunaId} key={comentar.id} />
             })
         } */}
+            <CardPostingan />
             <CardPostingan />
             <CardPostingan />
         </div>

@@ -17,13 +17,15 @@ function App() {
   return (
     <div className='flex bg-blue-gray-50 min-h-[100vh]'>
       <Sidebar toggleHandler={toggleSidebar} isSidebarOn={isSidebarOn} />
-      < Routes >
-        <Route path="/" element={<HalamanBeranda toggleSidebar={toggleSidebar} isSidebarOn={isSidebarOn} />} />
-        <Route path="/diskusi" element={<HalamanDiskusi toggleSidebar={toggleSidebar} isSidebarOn={isSidebarOn} />} />
-        <Route path="/diskusi/HalamanDetail/:id" element={<DetailHalamanRuangDiskusi />} />
-        <Route path="/follow" element={<HalamanFollow toggleSidebar={toggleSidebar} isSidebarOn={isSidebarOn} />} />
-        <Route path="/profile" element={<HalamanProfile />} />
-      </Routes >
+      <div className='flex flex-col flex-1'>
+        < Routes>
+          <Route path="/" element={<HalamanBeranda toggleSidebar={toggleSidebar} isSidebarOn={isSidebarOn} />} />
+          <Route path="/diskusi" element={<HalamanDiskusi toggleSidebar={toggleSidebar} isSidebarOn={isSidebarOn} />} />
+          <Route path="/diskusi/HalamanDetail/:id" element={<DetailHalamanRuangDiskusi />} />
+          <Route path="/follow" element={<HalamanFollow toggleSidebar={toggleSidebar} isSidebarOn={isSidebarOn} />} />
+          <Route path="/profile" element={<HalamanProfile />} />
+        </Routes >
+      </div>
     </div>
   )
 }

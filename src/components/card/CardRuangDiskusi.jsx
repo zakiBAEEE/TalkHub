@@ -14,11 +14,11 @@ function CardRuangDiskusi({ id, nama, deskripsi, gambarProfile }) {
     const navigate = useNavigate();
 
     function onClickHandler() {
-        navigate('')
+        navigate(`/diskusi/halamanDetail/${id}`)
     }
 
     return (
-        <Card className="w-64 h-72 overflow-hidden flex flex-col cursor-pointer" >
+        <Card className="w-64 h-72 overflow-hidden flex flex-col cursor-pointer" onClick={onClickHandler}>
             <CardHeader
                 floated={false}
                 shadow={false}

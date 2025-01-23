@@ -22,7 +22,7 @@ function App() {
         < Routes>
           <Route path="/" element={<HalamanBeranda toggleSidebar={toggleSidebar} isSidebarOn={isSidebarOn} />} />
           <Route path="/diskusi" element={<HalamanDiskusi toggleSidebar={toggleSidebar} isSidebarOn={isSidebarOn} />} />
-          <Route path="/diskusi/HalamanDetail/:id" element={<DetailHalamanRuangDiskusi />} />
+          <Route path="/diskusi/halamanDetail/:id" element={<DetailHalamanRuangDiskusi />} />
           <Route path="/follow" element={<HalamanFollow toggleSidebar={toggleSidebar} isSidebarOn={isSidebarOn} />} />
           <Route path="/profile" element={<HalamanProfile />} />
         </Routes >

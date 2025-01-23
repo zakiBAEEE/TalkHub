@@ -1,5 +1,5 @@
 // Data dummy (diimpor atau disediakan di awal)
-import { data } from "./ruang_diskusi_dummy";
+import { data } from './dummy_forums'
 let ruangDiskusi = data; // Gantikan ini dengan data dummy Anda setelah di-load
 
 // Fungsi untuk melakukan operasi CRUD

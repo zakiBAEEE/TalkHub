@@ -32,7 +32,7 @@ function HalamanDiskusi() {
                     <div className='m-auto mt-6 flex flex-col gap-4 items-start flex-grow w-[90%]'>
                         <Tabs tabs={subTabs} activeTab={activeChildTab} setActiveTab={setActiveChildTab} />
                         {
-                            activeChildTab == 'mengikuti' ? (<RuangDiskusiList ruangDiskusis={ruangDiskusis} />) : (<RuangDiskusiList ruangDiskusis={readRuangDiskusi} />)
+                            activeChildTab == 'mengikuti' ? (<RuangDiskusiList ruangDiskusis={ruangDiskusis} />) : (<RuangDiskusiList ruangDiskusis={ruangDiskusis} />)
                         }
                     </div>
                 )

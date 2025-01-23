@@ -76,7 +76,11 @@ function HalamanRegister() {
                     </div>
 
                 </form>
-                <Typography variant='small'>Anda Sudah Punya Akun? Silakan Login <Link to={'/'} color='blue'>Disini</Link></Typography>
+                <div className="flex justify-center mt-4">
+                    <span className="text-sm text-gray-600">
+                        Sudah Punya Akun? <Link to="/" className="text-blue-500 hover:text-blue-700">Login</Link>
+                    </span>
+                </div>
             </div>
         </div>
     );

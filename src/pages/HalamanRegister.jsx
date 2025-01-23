@@ -1,6 +1,7 @@
-import { Button, Input } from '@material-tailwind/react';
+import { Button, Input, Typography } from '@material-tailwind/react';
 import { useInput } from '../components/customHooks/useInput'
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 
 function HalamanRegister() {
@@ -73,7 +74,9 @@ function HalamanRegister() {
                             Register
                         </Button>
                     </div>
+
                 </form>
+                <Typography variant='small'>Anda Sudah Punya Akun? Silakan Login <Link to={'/'} color='blue'>Disini</Link></Typography>
             </div>
         </div>
     );

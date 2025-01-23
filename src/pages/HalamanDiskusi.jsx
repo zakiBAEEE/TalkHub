@@ -21,6 +21,18 @@ function HalamanDiskusi() {
         return null
     }
 
+    const filteredRuangDiskusis = ruangDiskusis.filter((ruangDiskusi) => {
+        if (activeTab == 'cariRuang') {
+            return ruangDiskusi.follow == false
+        }
+        else if (activeTab == 'ruangMu') {
+            if (activeChildTab == 'mengikuti') {
+                return ruangDiskusi.follow = true
+            }
+            return ruangDiskusi.isCreatedByMe == true
+        }
+    })
+
     return (
         <div className='flex flex-col'>
             <div className='flex flex-col items-center py-3'>
@@ -28,11 +40,11 @@ function HalamanDiskusi() {
                 <SearchBar placeholder='Cari Ruang Diskusi' />
             </div>
             {
-                activeTab == 'cariRuang' ? (<RuangDiskusiList ruangDiskusis={ruangDiskusis} />) : (
+                activeTab == 'cariRuang' ? (<RuangDiskusiList ruangDiskusis={filteredRuangDiskusis} />) : (
                     <div className='m-auto mt-6 flex flex-col gap-4 items-start flex-grow w-[90%]'>
                         <Tabs tabs={subTabs} activeTab={activeChildTab} setActiveTab={setActiveChildTab} />
                         {
-                            activeChildTab == 'mengikuti' ? (<RuangDiskusiList ruangDiskusis={ruangDiskusis} />) : (<RuangDiskusiList ruangDiskusis={ruangDiskusis} />)
+                            activeChildTab == 'mengikuti' ? (<RuangDiskusiList ruangDiskusis={filteredRuangDiskusis} />) : (<RuangDiskusiList ruangDiskusis={filteredRuangDiskusis} />)
                         }
                     </div>
                 )

@@ -1,0 +1,6 @@
+
+function HalamanRegister() {
+
+}
+
+export { HalamanRegister }

@@ -5,7 +5,7 @@ const data = [
     "deskripsi": "Tempat bertukar pikiran secara kreatif.",
     "pengguna": "Isabella Anderson",
     "gambarProfil": "https://source.unsplash.com/100x100/?person,1",
-    "follow": false,
+    "follow": true,
     "isCreatedByMe": true,
     "threads": [
       {

@@ -20,7 +20,12 @@ function Tabs({ tabs, activeTab, setActiveTab }) {
 };
 
 Tabs.propTypes = {
-    tabs: PropTypes.object.isRequired,
+    tabs: PropTypes.arrayOf(
+        PropTypes.shape({
+            label: PropTypes.string.isRequired, // label harus string dan wajib ada
+            value: PropTypes.string.isRequired, // value harus string dan wajib ada
+        })
+    ).isRequired,
     activeTab: PropTypes.string.isRequired,
     setActiveTab: PropTypes.func.isRequired
 }

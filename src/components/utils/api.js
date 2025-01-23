@@ -1,5 +1,6 @@
 // Data dummy (diimpor atau disediakan di awal)
-let ruangDiskusi = []; // Gantikan ini dengan data dummy Anda setelah di-load
+import { data } from "./ruang_diskusi_dummy";
+let ruangDiskusi = data; // Gantikan ini dengan data dummy Anda setelah di-load
 
 // Fungsi untuk melakukan operasi CRUD
 

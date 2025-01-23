@@ -8,11 +8,13 @@ import {
     Tooltip,
 } from "@material-tailwind/react";
 import PropTypes from "prop-types";
+import { useNavigate } from "react-router-dom";
 
 function CardRuangDiskusi({ id, nama, deskripsi, gambarProfile }) {
+    const navigate = useNavigate();
 
     function onClickHandler() {
-
+        navigate('')
     }
 
     return (

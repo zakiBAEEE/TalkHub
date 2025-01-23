@@ -6,12 +6,26 @@ import { useState } from 'react'
 import { DetailHalamanRuangDiskusi } from './pages/DetailHalamanDiskusi';
 import { HalamanProfile } from './pages/HalamanProfile';
 import { Sidebar } from './components/sidebar/Sidebar';
+import { HalamanLogin } from './pages/HalamanLogin';
+import { HalamanRegister } from './pages/HalamanRegister';
 
 function App() {
   const [isSidebarOn, setIsSidebarOn] = useState(true);
+  const [authedUser, setAuthedUser] = useState(null);
 
   function toggleSidebar() {
     setIsSidebarOn((prevState) => { return prevState == true ? false : true })
+  }
+
+  if (authedUser == null) {
+    return (
+      <div className='flex bg-blue-gray-50 min-h-[100vh] items-center justify-center'>
+        <Routes>
+          <Route path='/*' element={<HalamanLogin />} />
+          <Route path='/register' element={<HalamanRegister />} />
+        </Routes>
+      </div>
+    )
   }
 
   return (

@@ -3,7 +3,7 @@ import { Card, ListItem, ListItemPrefix, Typography } from '@material-tailwind/r
 import { Link } from 'react-router-dom';
 import { ChatBubbleBottomCenterIcon, HomeIcon, PowerIcon, UserCircleIcon, UserPlusIcon } from '@heroicons/react/24/solid';
 
-function Sidebar({ isSidebarOn, toggleHandler }) {
+function Sidebar({ isSidebarOn, toggleHandler, onLogout }) {
     return (
         <div className={`transition-all duration-900 ease-out ${isSidebarOn ? 'w-[12rem]' : 'w-20'
             }`}
@@ -53,7 +53,7 @@ function Sidebar({ isSidebarOn, toggleHandler }) {
                     </Link>
 
 
-                    <ListItem>
+                    <ListItem onClick={onLogout}>
                         {/* <Link to="/"></Link> */}
                         <ListItemPrefix>
                             <PowerIcon className="h-5 w-5" />
@@ -71,6 +71,7 @@ function Sidebar({ isSidebarOn, toggleHandler }) {
 
 Sidebar.propTypes = {
     isSidebarOn: PropTypes.bool.isRequired,
-    toggleHandler: PropTypes.func.isRequired
+    toggleHandler: PropTypes.func.isRequired,
+    onLogout: PropTypes.func.isRequired
 }
 export { Sidebar }

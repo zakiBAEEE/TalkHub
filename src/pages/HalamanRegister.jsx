@@ -1,10 +1,11 @@
-import { Button, Input, Typography } from '@material-tailwind/react';
+import { Button, Input } from '@material-tailwind/react';
 import { useInput } from '../components/customHooks/useInput'
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
 
-function HalamanRegister() {
+function HalamanRegister({ onRegister }) {
     const [nama, onChangeNama] = useInput();
     const [email, onChangeEmail] = useInput();
     const [password, onChangePassword] = useInput();
@@ -20,7 +21,7 @@ function HalamanRegister() {
         }
 
         // Implement registration logic here
-        console.log('Form submitted', { name, email, password });
+        onRegister(email, password)
     };
     return (
         <div className="flex justify-center items-center h-screen">
@@ -84,6 +85,10 @@ function HalamanRegister() {
             </div>
         </div>
     );
+}
+
+HalamanRegister.propTypes = {
+    onRegister: PropTypes.func.isRequired
 }
 
 export { HalamanRegister }

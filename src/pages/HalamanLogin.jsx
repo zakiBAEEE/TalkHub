@@ -4,11 +4,19 @@ import { useInput } from "../components/customHooks/useInput";
 import { Button, Input } from "@material-tailwind/react";
 import { Link } from "react-router-dom";
 
-function HalamanLogin() {
+function HalamanLogin({ onLogin }) {
     const [email, onChangeEmail] = useInput();
     const [password, onChangePassword] = useInput();
     const [error, setError] = useState();
 
+
+    function handleSubmit(e) {
+        e.preventDefault();
+
+
+        // Implement registration logic here
+        onLogin(email, password)
+    };
     return (
         <div className="flex justify-center items-center h-screen bg-gray-100">
             <div className="bg-white p-8 rounded-lg shadow-lg w-96">
@@ -37,7 +45,7 @@ function HalamanLogin() {
                     </div>
 
                     <div className="flex justify-center">
-                        <Button type="submit" className="w-full bg-blue-500 hover:bg-blue-700 text-white">
+                        <Button type="submit" className="w-full bg-blue-500 hover:bg-blue-700 text-white" onClick={handleSubmit}>
                             Login
                         </Button>
                     </div>
